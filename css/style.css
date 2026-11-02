@@ -1,0 +1,177 @@
+@charset 'utf-8';
+
+/*폰트설정 클래스*/
+.gothic-a1-regular {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/*
+var() 함수: 변수를 사용할 때
+cal() 함수: 계산할 때
+함수: 기능들을 모아놓은 저장소
+*/
+body{
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+/* header 영역 */
+header{
+  display: flex;
+  /* 기본값: 따로 설정 안해도 됨 생략가능
+  flex-direction: row ; */
+  justify-content: space-between; 
+  padding: 1rem;
+  align-items: center;
+  /* 1rem = 16px */
+  >a{
+    font-size:1.2rem;
+    font-weight:700;
+    color: var(--primary-color);
+  }
+}
+header > ul{
+  display: flex;
+  gap: 1rem;
+}
+header > p{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding:0.5rem 1rem;
+  border-radius:2rem;
+}
+
+h1{
+  font-family: :'Myfont',sansserif;
+}
+
+/*main #hero 영역*/
+#hero{
+  background-color: #ccc;
+  background-image: linear-gradient(90deg, rgba(48, 59, 50, 0.5) 0%, rgba(138, 148, 138, 0.5) 100%), url(../images/green-hero.jpg);
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  /*중앙정렬*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /*폰트 색상: 흰색*/
+  color:var(--white-color)
+  }
+  
+  #hero > a{
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  padding: 0.8rem 1.3rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  }
+#hero >.line{
+  width: 60px;
+  height:4px;
+  border-radius:2px;
+  background-color: var(--accent-color);
+}
+
+
+/* main #plants 영역*/
+#plants{
+  padding: 3rem 0;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  gap: 1rem;
+}
+#plants>.line{
+  width: 40px;
+  height: 4px;
+  border-radius:2px;
+  background-color:var(--primary-color)
+}
+#plants> .cards{
+display: flex;
+gap: 2rem;
+width: 33.333333%;
+}
+#plants> .cards >li{
+flex: 1;
+border: 1px solid #dfdfdf;
+/* clip-contents check */
+overflow: hidden;
+border-radius: 1rem;
+/* 기준 영역 */
+position: relative;
+}
+#plants> .cards > li > .badge{
+  background-color: var(--accent-color);
+  font-size:0.8rem;
+  font-weight:600;
+  padding: 4px 10px;
+  border-radius: 20px;
+/*위치 이동*/
+position:absolute;
+left: 10px;
+top: 10px;
+}
+#plants >.cards > li > img{
+  width: 100%;
+}
+#plants>.cards>li>.card-text{
+  padding: 1rem;
+  line-height: 1.8;
+}
+#plants>.cards>li>.card-text>p:nth-child(2){
+  font-size:0.9rem;
+}
+#plants>.cards>li>.card-text> p:nth-child(3){
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+
+/* main #feature 영역 */
+#feature{
+  display: flex;
+  justify-content: space-around; /*or center*/
+  width: 1000px;
+  margin:2rem auto;
+  text-align: center;
+}
+#feature > div{
+  flex: 1;
+  line-height: 2;
+}
+#feature > div > p:nth-child(1){
+  font-size: 3rem;
+}
+#feature > div > p:nth-child(2){
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+#feature > div > p:nth-child(3){
+  font-size: 0.9rem;
+}
+
+/* footer */
+footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondery-color);
+  color: var(--white-color);
+  padding: 1rem;
+}
+footer > ul{
+  display: flex;
+  gap: 1rem;
+}
+
